@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>SKU page</title>
+</head>
+<style>
+body {
+    background-color: #888383;
+}
+form {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 5px solid #0000009c;
+    border-radius: 10px;
+    background-color: #ccc;
+}
+back
+
+  
+</style>
+<body>
+    <a href="index.html"> Click for homepage</a>
+    <form>
+    <div>
+        <h2>Category</h2>
+        <label for="Category">Choose a category</label>
+        <select id="Category" name="Choices">
+            <option value="Giniling">Giniling</option>
+            <option value="Arroz caldo">Arroz caldo</option>
+            <option value="Sinigang">Sinigang</option>
+            <option value="Tinola">Tinola</option>
+        </select>
+        <br>
+
+        <h2>Product Name</h2>
+        <input id="Product_name" type="text" placeholder="e.g. Chicken Tinola">
+
+        <h2>Stock Quantity</h2>
+        <input id="Stock_quantity" type="number" min="0" step="1" placeholder="e.g. 20">
+        <br><br>
+
+        <input type="button" py-click="GenerateSKU" value="Generate SKU"> <br>
+        <div id="sku_result" aria-live="polite"></div>
+
+        <py-script src="sku.py"></py-script>
+
+    </div>
+    </form>
+</body>
+</html>
